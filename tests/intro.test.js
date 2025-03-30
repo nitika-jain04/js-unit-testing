@@ -1,5 +1,5 @@
 import { describe, test, it, expect } from "vitest";
-import { max } from "../src/intro";
+import { fizzBuzz, max } from "../src/intro";
 
 describe("max", () => {
   it("should return the first arg if it is greater", () => {
@@ -9,5 +9,49 @@ describe("max", () => {
     const res = max(a, b);
 
     expect(res).toBe(2);
+  });
+
+  it("should return the second arg if it is greater", () => {
+    const a = 1;
+    const b = 2;
+
+    const res = max(a, b);
+
+    expect(res).toBe(2);
+  });
+
+  it("should return the first arg if args are equal", () => {
+    const a = 2;
+    const b = 2;
+
+    const res = max(a, b);
+
+    expect(res).toBe(2);
+  });
+});
+
+describe("fizzBuzz", () => {
+  it("should return FizzBuzz if divisible by both 3 and 5", () => {
+    const n = 15;
+
+    const res = fizzBuzz(n);
+
+    expect(res).toBe("FizzBuzz");
+  });
+
+  it("should return Fizz if divisible by 3", () => {
+    const n = 21;
+
+    const res = fizzBuzz(n);
+
+    expect(res).toBe("Fizz");
+  });
+
+  it("should return Buzz if divisible by 5", () => {
+    const n = 20;
+
+    const res = fizzBuzz(n);
+
+    expect(res).toBe("Buzz");
   });
 });
