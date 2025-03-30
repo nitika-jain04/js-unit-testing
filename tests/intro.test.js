@@ -1,5 +1,5 @@
 import { describe, test, it, expect } from "vitest";
-import { fizzBuzz, max } from "../src/intro";
+import { factorial, fizzBuzz, max } from "../src/intro";
 
 describe("max", () => {
   it("should return the first arg if it is greater", () => {
@@ -53,5 +53,23 @@ describe("fizzBuzz", () => {
     const res = fizzBuzz(n);
 
     expect(res).toBe("Buzz");
+  });
+});
+
+describe("factorial", () => {
+  it("shld return 1 if arg is 0", () => {
+    expect(factorial(0)).toBe(1);
+  });
+
+  it("shld return 1 if arg is 1", () => {
+    expect(factorial(1)).toBe(1);
+  });
+
+  it("shld return 24 if arg is 4", () => {
+    expect(factorial(4)).toBe(24);
+  });
+
+  it("shld return undefined if arg is less than 0", () => {
+    expect(factorial(-2)).toBeUndefined();
   });
 });
