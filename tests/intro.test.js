@@ -61,9 +61,9 @@ describe("factorial", () => {
     expect(factorial(0)).toBe(1);
   });
 
-  // it("shld return 1 if arg is 1", () => {
-  //   expect(factorial(1)).toBe(1);
-  // });
+  it("shld return 1 if arg is 1", () => {
+    expect(factorial(1)).toBe(1);
+  });
 
   it("shld return 24 if arg is 4", () => {
     expect(factorial(4)).toBe(24);
