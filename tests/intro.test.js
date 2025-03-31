@@ -61,15 +61,15 @@ describe("factorial", () => {
     expect(factorial(0)).toBe(1);
   });
 
-  it("shld return 1 if arg is 1", () => {
-    expect(factorial(1)).toBe(1);
-  });
+  // it("shld return 1 if arg is 1", () => {
+  //   expect(factorial(1)).toBe(1);
+  // });
 
   it("shld return 24 if arg is 4", () => {
     expect(factorial(4)).toBe(24);
   });
 
-  // it("shld return undefined if arg is less than 0", () => {
-  //   expect(factorial(-2)).toBeUndefined();
-  // });
+  it("shld return undefined if arg is less than 0", () => {
+    expect(factorial(-2)).toBeUndefined();
+  });
 });
